@@ -14,6 +14,9 @@ public class LevelParser : MonoBehaviour
     [FormerlySerializedAs("stone")]
     public GameObject StonePrefab;
 
+    public GameObject WaterPrefab;
+    public GameObject MetalPollPrefab;
+
     public Transform environmentRoot;
 
 
@@ -74,6 +77,9 @@ public class LevelParser : MonoBehaviour
                 var questionObj = Instantiate(questionBoxPrefab);
                 var rockObj = Instantiate(rockPrefab);
 
+                var waterObj = Instantiate(WaterPrefab);
+                var metalpollObj = Instantiate(MetalPollPrefab);
+
                 // Todo - Position the new GameObject at the appropriate location by using row and column
                 // Todo - Parent the new GameObject under levelRoot
 
@@ -98,8 +104,21 @@ public class LevelParser : MonoBehaviour
                     rockObj.transform.position = new Vector3(column + 1, row + (float)0.55, 0f);
                 }
 
-               
-                
+
+                // new prefabs
+
+                if (letter == 'w')
+                {
+                    waterObj.transform.position = new Vector3(column + 1, row + (float)0.55, 0f);
+                }
+
+                if (letter == 'g')
+                {
+                    metalpollObj.transform.position = new Vector3(column + 1, row + (float)0.55, 0f);
+                }
+
+
+
 
 
 
