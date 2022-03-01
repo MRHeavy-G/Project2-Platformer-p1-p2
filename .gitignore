@@ -90,6 +90,16 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
+*.meta
+*.mat
+*.shader
+*.png
+*.asset
+*.prefab
+*.flare
+*.unity
+*.txt
+*.DAE
 
 # Unity3D generated file on crash reports
 sysinfo.txt
